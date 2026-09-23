@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Yandex Browser Yellow",
+  "name": "Yandex Browser Yellow&Black",
   "version": "1.0",
-  "description": "Тема Firefox в цветах жёлтой темы Yandex Browser: тёмная панель вкладок и золотая панель инструментов.",
+  "description": "A Firefox theme matching Yandex Browser's yellow theme: dark tab bar and gold toolbar/address bar.",
   "browser_specific_settings": {
     "gecko": {
       "id": "yandex-browser-yellow@local.theme",
