@@ -1,0 +1,61 @@
+{
+  "manifest_version": 3,
+  "name": "Yandex Browser Yellow",
+  "version": "1.0",
+  "description": "Тема Firefox в цветах жёлтой темы Yandex Browser: тёмная панель вкладок и золотая панель инструментов.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "yandex-browser-yellow@local.theme",
+      "strict_min_version": "115.0"
+    }
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#2f2f2f",
+      "frame_inactive": "#2f2f2f",
+
+      "tab_selected": "#ffcb09",
+      "tab_text": "#262524",
+      "tab_background_text": "#d9d9d9",
+      "tab_loading": "#ffcb09",
+      "tab_line": "#ffcb09",
+
+      "toolbar": "#f7b520",
+      "toolbar_text": "#262524",
+      "icons": "#262524",
+      "bookmark_text": "#262524",
+
+      "toolbar_field": "#f7b520",
+      "toolbar_field_text": "#262524",
+      "toolbar_field_border": "transparent",
+      "toolbar_field_focus": "#ffcb09",
+      "toolbar_field_text_focus": "#262524",
+      "toolbar_field_border_focus": "transparent",
+
+      "button_background_hover": "rgba(0,0,0,0.08)",
+      "button_background_active": "rgba(0,0,0,0.16)",
+
+      "sidebar": "#2f2f2f",
+      "sidebar_text": "#d9d9d9",
+      "sidebar_border": "#1c1c1c",
+      "sidebar_highlight": "#ffcb09",
+      "sidebar_highlight_text": "#262524",
+
+      "popup": "#2f2f2f",
+      "popup_text": "#e8e8e8",
+      "popup_border": "#1c1c1c",
+
+      "toolbar_top_separator": "transparent",
+      "toolbar_bottom_separator": "#1c1c1c",
+      "toolbar_vertical_separator": "rgba(0,0,0,0.2)"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "toolbar_field_color_scheme": "light"
+    }
+  }
+}
