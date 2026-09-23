@@ -1,60 +1,60 @@
 # Yandex Browser Yellow&Black
 
-Тема для Firefox, повторяющая цветовую схему жёлтой темы Yandex Browser: тёмная (почти чёрная) панель вкладок и золотисто-жёлтая панель инструментов/адресная строка. Работает как в обычном горизонтальном тулбаре вкладок, так и в **вертикальном TabBar** — для него отдельно заданы `sidebar_*` цвета, так что активная вкладка остаётся жёлтой, а фон панели — тёмным.
+A Firefox theme that reproduces the color scheme of Yandex Browser's yellow theme: a dark (near-black) tab bar and a golden-yellow toolbar/address bar. Works with both the regular horizontal tab strip and the **vertical TabBar** — `sidebar_*` colors are set separately so the active tab stays yellow and the strip background stays dark there too.
 
 <p align="center">
-  <img src="screenshots/yandex-browser-reference.png" alt="Референс — панель Yandex Browser, с которой снята палитра" width="700">
+  <img src="screenshots/yandex-browser-reference.png" alt="Reference — the Yandex Browser chrome the palette was sampled from" width="700">
 </p>
 
-*Скриншот выше — оригинальный Yandex Browser, использованный как референс для подбора цветов (не скриншот самой темы в Firefox).*
+*The screenshot above is the original Yandex Browser used as a color reference (not a screenshot of the theme running in Firefox).*
 
-## Цветовая палитра
+## Color palette
 
-| Элемент | Цвет |
+| Element | Color |
 |---|---|
-| Панель вкладок / `frame` | `#2f2f2f` |
-| Активная вкладка / `tab_selected` | `#ffcb09` |
-| Текст неактивных вкладок | `#d9d9d9` |
-| Панель инструментов и адресная строка / `toolbar` | `#f7b520` |
-| Текст и иконки на панели инструментов | `#262524` |
-| Вертикальный TabBar (фон / активная вкладка) | `#2f2f2f` / `#ffcb09` |
+| Tab bar / `frame` | `#2f2f2f` |
+| Active tab / `tab_selected` | `#ffcb09` |
+| Inactive tab text | `#d9d9d9` |
+| Toolbar and address bar / `toolbar` | `#f7b520` |
+| Toolbar text and icons | `#262524` |
+| Vertical TabBar (background / active tab) | `#2f2f2f` / `#ffcb09` |
 
-## Установка
+## Installation
 
-### Вариант A — через Add-ons Manager (Mozilla AMO)
+### Option A — via the Add-ons Manager (Mozilla AMO)
 
-Тема загружена на addons.mozilla.org и сейчас **находится на модерации**:
+The theme has been submitted to addons.mozilla.org and is currently **pending review**:
 
-- Страница разработчика (видна только из моего аккаунта, пока идёт ревью): https://addons.mozilla.org/en-US/developers/addon/yandex-browser-yellow-black
-- Публичная страница дополнения (станет доступна всем после одобрения): https://addons.mozilla.org/en-US/firefox/addon/yandex-browser-yellow-black/
+- Developer page (visible only from my account while the review is in progress): https://addons.mozilla.org/en-US/developers/addon/yandex-browser-yellow-black
+- Public listing page (will become available to everyone once approved): https://addons.mozilla.org/en-US/firefox/addon/yandex-browser-yellow-black/
 
-Как только AMO одобрит тему, по второй ссылке можно будет поставить её в один клик через «Add to Firefox» / «Установить».
+Once AMO approves the theme, the second link will let anyone install it in one click via "Add to Firefox".
 
-### Вариант B — временная установка вручную (уже сейчас, без ожидания модерации)
+### Option B — temporary manual install (works right now, no need to wait for review)
 
-1. Открой `about:debugging#/runtime/this-firefox` в адресной строке Firefox.
-2. Нажми **«Загрузить временное дополнение…»**.
-3. Выбери файл [`manifest.json`](manifest.json) из этого репозитория.
+1. Open `about:debugging#/runtime/this-firefox` in the address bar.
+2. Click **"Load Temporary Add-on…"**.
+3. Select the [`manifest.json`](manifest.json) file from this repository.
 
-Тема применится сразу, но слетит при перезапуске браузера — шаги нужно повторять после каждого запуска.
+The theme applies immediately, but is removed on browser restart — repeat these steps after every launch.
 
-### Вариант C — постоянная установка из `.xpi` (без ожидания AMO)
+### Option C — permanent install from a `.xpi` (no need to wait for AMO)
 
-Собери архив (см. раздел «Сборка» ниже) и установи его как unsigned-дополнение:
+Build the archive (see "Build" below) and install it as an unsigned add-on:
 
-- **Firefox Developer Edition / Nightly / ESR**: в `about:config` выстави `xpinstall.signatures.required = false`, затем перетащи `.xpi` в окно браузера.
-- **Обычный релизный Firefox**: постоянная установка неподписанного `.xpi` невозможна — дождись одобрения на AMO (вариант A) либо используй вариант B.
+- **Firefox Developer Edition / Nightly / ESR**: set `xpinstall.signatures.required = false` in `about:config`, then drag the `.xpi` into the browser window.
+- **Regular release Firefox**: a permanent install of an unsigned `.xpi` isn't possible — wait for AMO approval (Option A) or use Option B.
 
-## Сборка `.xpi`
+## Build
 
 ```bash
 zip -r -X yandex-browser-yellow.xpi manifest.json icons
 ```
 
-## Структура репозитория
+## Repository layout
 
 ```
-manifest.json   — манифест темы (WebExtension theme, manifest_version 3)
-icons/          — иконка дополнения для about:addons (48px, 96px)
-screenshots/    — референсный скриншот Yandex Browser
+manifest.json   — theme manifest (WebExtension theme, manifest_version 3)
+icons/          — add-on icon shown in about:addons (48px, 96px)
+screenshots/    — reference screenshot of Yandex Browser
 ```
